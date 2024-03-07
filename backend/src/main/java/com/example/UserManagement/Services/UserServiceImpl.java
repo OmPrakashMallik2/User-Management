@@ -45,4 +45,13 @@ public class UserServiceImpl implements UserService {
         }
         return user.get();
     }
+
+    @Override
+    public User getUserByUsernamePassword(String username, String password) throws Exception {
+        User user = userRepository.findByUsernameAndPassword(username, password);
+        if (user == null) {
+            throw new Exception("User not found");
+        }
+        return user;
+    }
 }

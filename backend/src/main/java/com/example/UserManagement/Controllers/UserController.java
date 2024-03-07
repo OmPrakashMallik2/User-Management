@@ -24,6 +24,11 @@ public class UserController {
         return new ResponseEntity<>(userService.getUserById(userId), HttpStatus.OK);
     }
 
+    @GetMapping("/users/{username}/{password}")
+    public ResponseEntity<User> getUserByUsernamePassword(@PathVariable("username") String username, @PathVariable("password") String password) throws Exception {
+        return new ResponseEntity<>(userService.getUserByUsernamePassword(username, password), HttpStatus.OK);
+    }
+
     @PostMapping("/user")
     public ResponseEntity<User> addUser(@RequestBody User user) {
         return new ResponseEntity<>(userService.addUser(user), HttpStatus.CREATED);
