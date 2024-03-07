@@ -14,22 +14,26 @@ public class User {
     private String email;
     private String username;
     private String password;
+    private String bio;
     private String dateOfBirth;
     private String gender;
+    private String qualifications;
     private String address;
     private String contactNumber;
 
     public User() {
     }
 
-    public User(Integer userId, String fullName, String email, String username, String password, String dateOfBirth, String gender, String address, String contactNumber) {
+    public User(Integer userId, String fullName, String email, String username, String password, String bio, String dateOfBirth, String gender, String qualifications, String address, String contactNumber) {
         this.userId = userId;
         this.fullName = fullName;
         this.email = email;
         this.username = username;
         this.password = password;
+        this.bio = bio;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
+        this.qualifications = qualifications;
         this.address = address;
         this.contactNumber = contactNumber;
     }
@@ -104,5 +108,21 @@ public class User {
 
     public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getQualifications() {
+        return qualifications;
+    }
+
+    public void setQualifications(String qualifications) {
+        this.qualifications = qualifications;
     }
 }

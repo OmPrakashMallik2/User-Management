@@ -1,9 +1,10 @@
 import './App.css';
+import User from './User';
 
 function App() {
   return (
-    <div>
-      <h1 className='text-8xl text-red-600 font-semibold'>Hello OP</h1>
+    <div className='mx-32 mt-16'> 
+      <User />
     </div>
   );
 }

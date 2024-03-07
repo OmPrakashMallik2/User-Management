@@ -26,6 +26,8 @@ public class UserServiceImpl implements UserService {
         newUser.setGender(user.getGender());
         newUser.setAddress(user.getAddress());
         newUser.setContactNumber(user.getContactNumber());
+        newUser.setQualifications(user.getQualifications());
+        newUser.setBio(user.getBio());
 
         return userRepository.save(newUser);
     }
