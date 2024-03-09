@@ -54,4 +54,57 @@ public class UserServiceImpl implements UserService {
         }
         return user;
     }
+
+    @Override
+    public User updateUser(Integer userId, User user) throws Exception {
+        Optional<User> foundUser = userRepository.findById(userId);
+        if (foundUser.isEmpty()) {
+            throw new Exception("user not found");
+        }
+
+        User updatedUser = foundUser.get();
+
+        if (user.getFullName() != null) {
+            updatedUser.setFullName(user.getFullName());
+        }
+
+        if (user.getEmail() != null) {
+            updatedUser.setEmail(user.getEmail());
+        }
+        if (user.getUsername() != null) {
+            updatedUser.setUsername(user.getUsername());
+        }
+        if (user.getPassword() != null) {
+            updatedUser.setPassword(user.getPassword());
+        }
+        if (user.getBio() != null) {
+            updatedUser.setBio(user.getBio());
+        }
+        if (user.getDateOfBirth() != null) {
+            updatedUser.setDateOfBirth(user.getDateOfBirth());
+        }
+        if (user.getGender() != null) {
+            updatedUser.setGender(user.getGender());
+        }
+        if (user.getQualifications() != null) {
+            updatedUser.setQualifications(user.getQualifications());
+        }
+        if (user.getAddress() != null) {
+            updatedUser.setAddress(user.getAddress());
+        }
+        if (user.getContactNumber() != null) {
+            updatedUser.setContactNumber(user.getContactNumber());
+        }
+        return userRepository.save(updatedUser);
+    }
+
+    @Override
+    public String deleteUser(Integer userId) throws Exception {
+        Optional<User> foundUser = userRepository.findById(userId);
+        if (foundUser.isEmpty()){
+            throw new Exception("user not found");
+        }
+        userRepository.delete(foundUser.get());
+        return "User deleted";
+    }
 }
