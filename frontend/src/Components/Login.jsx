@@ -61,6 +61,7 @@ function Login() {
             })
     }
 
+
     return (
         <div>
             {logedIn ?
@@ -74,7 +75,7 @@ function Login() {
                             <p className=' mt-2 text-xl text-neutral-500 text-center'>{userData.bio}</p>
                             <div className='mt-5'>
                                 <button onClick={deleteUser} className='font-semibold bg-red-500 border-solid border-2 border-red-500 px-5 py-2 rounded text-lg mx-3 text-white'>Delete</button>
-                                <button onClick={() => setLogedIn(false)} className='font-semibold bg-white border-solid border-2 border-blue-500 px-5 py-2 rounded text-lg mx-3 text-blue-500'>Logout</button>
+                                <button onClick={() => setLogedIn(false)} className='font-semibold bg-blue-500 border-solid border-2 border-blue-500 px-5 py-2 rounded text-lg mx-3 text-white'>Logout</button>
                             </div>
                         </div>
                         <div className='bg-white ml-2 rounded px-10 py-5 w-3/5'>
@@ -117,8 +118,8 @@ function Login() {
                     }
                     <form onSubmit={handleSubmit} className='flex flex-col items-center'>
                         <h3 className='text-3xl font-bold mb-2 text-neutral-800'>Login</h3>
-                        <input name="username" value={username} onChange={handleChange} type="text" className='m-2 text-xl font-semibold p-3  bg-neutral-200 outline-none rounded' placeholder='Username' required />
-                        <input name="password" value={password} onChange={handleChange} type="password" className='m-2 text-xl font-semibold p-3  bg-neutral-200 outline-none rounded' placeholder='Password' required />
+                        <input name="username" value={username} onChange={handleChange} type="text" className='m-2 text-xl font-semibold p-3  bg-blue-50 outline-none rounded' placeholder='Username' required />
+                        <input name="password" value={password} onChange={handleChange} type="password" className='m-2 text-xl font-semibold p-3  bg-blue-50 outline-none rounded' placeholder='Password' required />
                         <button type="submit" className='m-2 text-xl font-semibold px-6 py-3 bg-blue-500 text-white rounded'>Submit</button>
                     </form>
                 </div>)

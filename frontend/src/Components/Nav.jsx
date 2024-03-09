@@ -7,7 +7,7 @@ function Nav() {
             <Link to="/" className='text-center text-2xl font-bold text-blue-500'>User Management</Link>
             <div className='flex justify-between'>
                 <Link to="/login" className='font-semibold bg-blue-500 border-solid border-2 border-blue-500 px-5 py-2 rounded mx-2 text-lg text-white'>Login</Link>
-                <Link to="/signup" className='font-semibold bg-white border-solid border-2 border-blue-500 px-5 py-2 rounded mx-2 text-lg text-blue-500'>Signup</Link>
+                <Link to="/signup" className='font-semibold bg-blue-500 border-solid border-2 border-blue-500 px-5 py-2 rounded mx-2 text-lg text-white'>Signup</Link>
             </div>
         </div>
     )
